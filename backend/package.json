@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "npx prisma generate && tsc",
-    "start": "npx prisma migrate deploy && node dist/server.js",
+    "start": "node dist/server.js",
+    "migrate": "npx prisma migrate deploy",
     "lint": "eslint src/**/*.ts",
     "test": "jest",
     "seed": "ts-node src/scripts/seed.ts",

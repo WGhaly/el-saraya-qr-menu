@@ -1,0 +1,77 @@
+{
+  "menu": {
+    "title": "Saraya Drinks Menu",
+    "subtitle": "A curated selection of the finest drinks and coffee",
+    "tagline": "Premium Beverages",
+    "digitalMenu": "Digital Menu",
+    "scanOrderEnjoy": "Scan • Order • Enjoy",
+    "searchPlaceholder": "Search for a drink...",
+    "noResults": "No results found",
+    "noResultsDesc": "Try searching with different keywords or browse categories",
+    "allCategories": "All Categories",
+    "addToCart": "Add to Cart",
+    "viewDetails": "View Details",
+    "ingredients": "Ingredients",
+    "allergens": "Allergens",
+    "nutrition": "Nutrition Facts",
+    "preparationTime": "Preparation Time",
+    "variations": "Available Options",
+    "price": "Price",
+    "egp": "EGP",
+    "minutes": "minutes"
+  },
+  "categories": {
+    "hotDrinks": "Hot Drinks",
+    "coffee": "Coffee",
+    "cannedDrinks": "Canned Drinks",
+    "shisha": "Shisha",
+    "extras": "Extras"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "welcome": "Welcome",
+    "language": "Language"
+  },
+  "languages": {
+    "ar": "العربية",
+    "en": "English"
+  },
+  "navigation": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "categories": "Categories",
+    "products": "Products",
+    "settings": "Settings",
+    "users": "Users",
+    "analytics": "Analytics",
+    "logout": "Logout"
+  },
+  "forms": {
+    "nameEn": "Name in English",
+    "nameAr": "Name in Arabic", 
+    "descriptionEn": "Description in English",
+    "descriptionAr": "Description in Arabic",
+    "price": "Price",
+    "image": "Image",
+    "category": "Category",
+    "active": "Active",
+    "featured": "Featured",
+    "required": "Required"
+  }
+}

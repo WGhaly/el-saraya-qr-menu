@@ -1,0 +1,77 @@
+{
+  "menu": {
+    "title": "قائمة مشروبات سراية",
+    "subtitle": "مجموعة مختارة من أفضل المشروبات والقهوة",
+    "tagline": "مشروبات فاخرة",
+    "digitalMenu": "قائمة رقمية",
+    "scanOrderEnjoy": "امسح • اطلب • استمتع",
+    "searchPlaceholder": "ابحث عن مشروب...",
+    "noResults": "لا توجد نتائج",
+    "noResultsDesc": "جرب البحث بكلمات مختلفة أو تصفح الأقسام",
+    "allCategories": "جميع الأقسام",
+    "addToCart": "أضف للسلة",
+    "viewDetails": "عرض التفاصيل",
+    "ingredients": "المكونات",
+    "allergens": "المواد المسببة للحساسية",
+    "nutrition": "القيم الغذائية",
+    "preparationTime": "وقت التحضير",
+    "variations": "الخيارات المتاحة",
+    "price": "السعر",
+    "egp": "ج.م",
+    "minutes": "دقيقة"
+  },
+  "categories": {
+    "hotDrinks": "مشروبات ساخنة",
+    "coffee": "قهوة",
+    "cannedDrinks": "المشروبات المعلبة",
+    "shisha": "الشيشة",
+    "extras": "الإضافات"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "retry": "إعادة المحاولة",
+    "close": "إغلاق",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "add": "إضافة",
+    "welcome": "مرحباً",
+    "language": "اللغة"
+  },
+  "languages": {
+    "ar": "العربية",
+    "en": "English"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "menu": "القائمة",
+    "about": "حولنا",
+    "contact": "اتصل بنا"
+  },
+  "admin": {
+    "dashboard": "لوحة التحكم",
+    "categories": "الأقسام",
+    "products": "المنتجات",
+    "settings": "الإعدادات",
+    "users": "المستخدمون",
+    "analytics": "التحليلات",
+    "logout": "تسجيل الخروج"
+  },
+  "forms": {
+    "nameEn": "الاسم بالإنجليزية",
+    "nameAr": "الاسم بالعربية", 
+    "descriptionEn": "الوصف بالإنجليزية",
+    "descriptionAr": "الوصف بالعربية",
+    "price": "السعر",
+    "image": "الصورة",
+    "category": "القسم",
+    "active": "نشط",
+    "featured": "مميز",
+    "required": "مطلوب"
+  }
+}

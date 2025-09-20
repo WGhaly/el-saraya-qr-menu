@@ -1,0 +1,22 @@
+{
+  "name": "@saraya/shared",
+  "version": "1.0.0",
+  "description": "Shared types and utilities for Saraya QR Menu System",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src/**/*.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "eslint": "^8.51.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -8,7 +8,7 @@ import {
   LoginRequest,
   LoginResponse,
   RefreshTokenRequest
-} from '../../../shared/src/types'
+} from '../types'
 
 // Define ChangePasswordRequest type locally since it's not in shared types yet
 interface ChangePasswordRequest {

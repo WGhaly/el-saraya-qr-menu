@@ -9,7 +9,7 @@ import {
   MenuConfig,
   LoginRequest,
   LoginResponse 
-} from '../../../shared/src/types'
+} from '../types'
 
 // Auth Store
 interface AuthState {

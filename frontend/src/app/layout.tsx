@@ -1,7 +1,8 @@
 import './globals.css';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Saraya Drinks - Premium Beverage Menu | قائمة مشروبات الســـرايــا',
+  title: 'Al-Saraya Drinks - Premium Beverage Menu | قائمة مشروبات الســـرايــا',
   description: 'Discover our premium beverage selection',
   icons: {
     icon: '/saraya-logo.jpeg',

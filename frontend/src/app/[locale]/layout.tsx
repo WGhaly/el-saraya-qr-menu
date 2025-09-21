@@ -10,7 +10,7 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params: { locale } }: { params: { locale: string } }): Metadata {
   return {
-    title: 'Saraya Drinks - Premium Beverage Menu | قائمة مشروبات الســـرايــا',
+    title: 'Al-Saraya Drinks - Premium Beverage Menu | قائمة مشروبات الســـرايــا',
     description:
       locale === 'ar'
         ? 'استمتع بتشكيلة المشروبات المميزة من الســـرايــا'

@@ -15,6 +15,7 @@ export function generateMetadata({ params: { locale } }: { params: { locale: str
       locale === 'ar'
         ? 'استمتع بتشكيلة المشروبات المميزة من الســـرايــا'
         : 'Discover our premium beverage selection at Al-Saraya Drinks'
+  };
 }
 
 export default function LocaleLayout({

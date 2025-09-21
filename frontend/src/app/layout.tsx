@@ -1,8 +1,8 @@
 import './globals.css';
 
-export const metadata = {
-  title: 'Saraya Drinks - Premium Beverage Menu | قائمة مشروبات سراية',
-  description: 'Experience our premium beverage selection | استمتع بتشكيلة المشروبات المميزة',
+export const metadata: Metadata = {
+  title: 'Saraya Drinks - Premium Beverage Menu | قائمة مشروبات الســـرايــا',
+  description: 'Discover our premium beverage selection',
   icons: {
     icon: '/saraya-logo.jpeg',
     shortcut: '/saraya-logo.jpeg',

@@ -171,11 +171,11 @@ export default function AdminDashboard() {
             <div className="flex items-center space-x-4 rtl:space-x-reverse">
               <img 
                 src="/saraya-logo.jpeg" 
-                alt="شعار سراية" 
+                alt="شعار الســـرايــا" 
                 className="w-10 h-10 object-contain rounded-lg"
               />
               <div className="text-2xl font-display font-bold text-primary-600">
-                لوحة تحكم سراية
+                لوحة تحكم الســـرايــا
               </div>
             </div>
 
@@ -203,7 +203,7 @@ export default function AdminDashboard() {
             إدارة القائمة
           </h1>
           <p className="text-text-secondary">
-            إدارة قائمة مشروبات سراية الرقمية - الأصناف والمنتجات والأسعار
+            إدارة قائمة مشروبات الســـرايــا الرقمية - الأصناف والمنتجات والأسعار
           </p>
         </div>
 

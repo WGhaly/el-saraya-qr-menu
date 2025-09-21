@@ -10,11 +10,11 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params: { locale } }: { params: { locale: string } }): Metadata {
   return {
-    title: 'Saraya Drinks - Premium Beverage Menu | قائمة مشروبات سراية',
-    description: locale === 'ar' 
-      ? 'استمتع بتشكيلة المشروبات المميزة من سراية'
-      : 'Experience our premium beverage selection at Saraya Drinks'
-  };
+    title: 'Saraya Drinks - Premium Beverage Menu | قائمة مشروبات الســـرايــا',
+    description:
+      locale === 'ar'
+        ? 'استمتع بتشكيلة المشروبات المميزة من الســـرايــا'
+        : 'Discover our premium beverage selection at Al-Saraya Drinks'
 }
 
 export default function LocaleLayout({

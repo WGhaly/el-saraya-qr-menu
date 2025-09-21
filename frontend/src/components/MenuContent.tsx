@@ -63,7 +63,7 @@ export default function MenuContent({ locale }: MenuContentProps) {
           <div className="spinner mx-auto mb-6 h-12 w-12"></div>
           <div className="space-y-2">
             <h2 className="text-xl font-semibold text-primary-800">
-              {locale === 'ar' ? 'سراية للمشروبات' : 'Saraya Drinks'}
+              {locale === 'ar' ? 'الســـرايــا للمشروبات' : 'Al-Saraya Drinks'}
             </h2>
             <p className="text-primary-600">
               {locale === 'ar' ? 'جاري تحميل القائمة...' : 'Loading menu...'}
@@ -99,14 +99,14 @@ export default function MenuContent({ locale }: MenuContentProps) {
             <div className={`flex items-center ${locale === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
               <Image
                 src="/saraya-logo.jpeg"
-                alt="شعار سراية"
+                alt="شعار الســـرايــا"
                 width={48}
                 height={48}
                 className="rounded-lg shadow-accent"
               />
               <div>
                 <h1 className="text-2xl font-bold text-primary-800">
-                  {locale === 'ar' ? 'سراية للمشروبات' : 'Saraya Drinks'}
+                  {locale === 'ar' ? 'الســـرايــا للمشروبات' : 'Al-Saraya Drinks'}
                 </h1>
                 <p className="text-primary-700 text-sm font-medium">
                   {locale === 'ar' ? 'قائمة المشروبات المميزة' : 'Premium Beverage Menu'}
@@ -208,7 +208,7 @@ export default function MenuContent({ locale }: MenuContentProps) {
           <div className="text-center">
             <div className="mb-4">
               <h3 className="text-lg font-semibold text-primary-800 mb-2">
-                {locale === 'ar' ? 'سراية للمشروبات' : 'Saraya Drinks'}
+                {locale === 'ar' ? 'الســـرايــا للمشروبات' : 'Al-Saraya Drinks'}
               </h3>
               <p className="text-primary-600 text-sm">
                 {locale === 'ar' 
@@ -218,7 +218,7 @@ export default function MenuContent({ locale }: MenuContentProps) {
               </p>
             </div>
             <div className="flex justify-center space-x-4 text-xs text-primary-500">
-              <span>© 2024 Saraya Drinks</span>
+              <span>© 2024 الســـرايــا للمشروبات</span>
               <span>•</span>
               <span>
                 {locale === 'ar' ? 'جميع الحقوق محفوظة' : 'All Rights Reserved'}

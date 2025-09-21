@@ -70,7 +70,7 @@ app.use('/api/v1', apiRoutes);
 app.get('/', (req, res) => {
   res.json({
     success: true,
-    message: 'Saraya QR Menu API',
+    message: 'الســـرايــا QR Menu API',
     version: '1.0.0',
     documentation: '/api/v1/health',
     endpoints: {
@@ -97,7 +97,7 @@ app.use(errorHandler);
 const PORT = serverConfig.port;
 
 app.listen(PORT, () => {
-  console.log(`🚀 Saraya QR Menu API running on port ${PORT}`);
+  console.log(`🚀 الســـرايــا QR Menu API running on port ${PORT}`);
   console.log(`📍 Environment: ${serverConfig.nodeEnv}`);
   console.log(`🌐 CORS Origins: ${serverConfig.corsOrigins.join(', ')}`);
   console.log(`📁 Static files: /uploads`);

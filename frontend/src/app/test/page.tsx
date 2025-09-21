@@ -4,12 +4,12 @@ export default function TestPage() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Saraya Test</title>
+        <title>الســـرايــا Test</title>
       </head>
       <body style={{ backgroundColor: '#f3f4f6', minHeight: '100vh', padding: '2rem' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h1 style={{ color: '#dc2626', fontSize: '2rem', marginBottom: '1rem' }}>
-            مرحبا بكم في سراية للمشروبات
+            مرحبا بكم في الســـرايــا للمشروبات
           </h1>
           <div style={{ backgroundColor: 'white', padding: '1.5rem', borderRadius: '8px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
             <h2 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: '#dc2626' }}>

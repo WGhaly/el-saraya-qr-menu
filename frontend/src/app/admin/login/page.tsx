@@ -98,7 +98,7 @@ export default function AdminLoginPage() {
             <div className="mb-6">
               <img 
                 src="/saraya-logo.jpeg" 
-                alt="شعار سراية" 
+                alt="شعار الســـرايــا" 
                 className="w-20 h-20 object-contain mx-auto rounded-lg shadow-md"
               />
             </div>
@@ -177,8 +177,8 @@ export default function AdminLoginPage() {
 
           {/* Footer */}
           <div className="mt-8 text-center">
-            <p className="text-xs text-text-light">
-              نظام إدارة قائمة سراية للمشروبات
+            <p className="text-sm text-center text-secondary-600 mt-4">
+              نظام إدارة قائمة الســـرايــا للمشروبات
             </p>
           </div>
         </div>

@@ -216,7 +216,7 @@ export default function ProductsPage() {
               {/* Logo */}
               <img 
                 src="/saraya-logo.jpeg" 
-                alt="Saraya Logo" 
+                alt="شعار الســـرايــا" 
                 className="h-10 w-auto rounded-lg"
               />
               <h1 className="text-xl font-display font-bold text-text-primary">

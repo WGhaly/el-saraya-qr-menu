@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🌱 Starting Saraya QR Menu database seeding...');
+  console.log('🌱 Starting الســـرايــا QR Menu database seeding...');
 
   // Create admin user
   const hashedPassword = await bcrypt.hash('admin123', 12);
@@ -15,7 +15,7 @@ async function main() {
     create: {
       email: 'admin@saraya.com',
       password: hashedPassword,
-      firstName: 'Saraya',
+      firstName: 'الســـرايــا',
       lastName: 'Admin',
       role: UserRole.SUPER_ADMIN,
       isActive: true,
@@ -30,7 +30,7 @@ async function main() {
     update: {},
     create: {
       id: 'main-config',
-      restaurantNameEn: 'Saraya Drinks',
+      restaurantNameEn: 'Al-Saraya Drinks',
       restaurantNameAr: 'مشروبات سرايا',
       restaurantDescriptionEn: 'Premium drinks and beverages with authentic flavors that transport you to a world of taste and tradition.',
       restaurantDescriptionAr: 'مشروبات فاخرة ومميزة بنكهات أصيلة تنقلك إلى عالم من الطعم والتراث.',
@@ -320,7 +320,7 @@ async function main() {
       categoryName: 'Signature Mocktails',
       products: [
         {
-          name: 'Saraya Sunset',
+          name: 'الســـرايــا Sunset',
           description: 'Layered mocktail with passion fruit, orange, and grenadine',
           basePrice: 14.50,
           isFeatured: true,

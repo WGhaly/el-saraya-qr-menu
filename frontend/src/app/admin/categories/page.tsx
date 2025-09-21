@@ -207,7 +207,7 @@ export default function CategoriesPage() {
             <div className="flex items-center space-x-reverse space-x-4">
               <Image
                 src="/saraya-logo.jpeg"
-                alt="شعار سراية"
+                alt="شعار الســـرايــا"
                 width={40}
                 height={40}
                 className="rounded-lg"

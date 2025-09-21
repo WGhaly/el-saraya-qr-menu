@@ -15,7 +15,7 @@ async function main() {
     create: {
       email: 'admin@saraya.com',
       password: hashedPassword,
-      firstName: 'Saraya',
+      firstName: 'الســـرايــا',
       lastName: 'Admin',
       role: UserRole.SUPER_ADMIN,
       isActive: true,

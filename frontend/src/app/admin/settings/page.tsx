@@ -31,7 +31,7 @@ export default function SettingsPage() {
   } = useAuthStore()
 
   const [menuSettings, setMenuSettings] = useState({
-    restaurantName: 'EL Saraya',
+    restaurantName: 'الســـرايــا',
     restaurantNameAr: 'الســـرايــا',
     description: 'Premium Beverage Menu',
     descriptionAr: 'قائمة مشروبات مميزة',
@@ -179,7 +179,7 @@ export default function SettingsPage() {
             <div className="flex items-center space-x-reverse space-x-4">
               <Image
                 src="/saraya-logo.jpeg"
-                alt="شعار سراية"
+                alt="شعار الســـرايــا"
                 width={40}
                 height={40}
                 className="rounded-lg"
@@ -598,7 +598,7 @@ export default function SettingsPage() {
             <div className="flex justify-between items-center flex-row-reverse">
               <div>
                 <p className="font-medium text-text-primary">إصدار النظام</p>
-                <p className="text-sm text-text-secondary">نظام إدارة قائمة سراية v1.0</p>
+                <p className="text-sm text-text-secondary">نظام إدارة قائمة الســـرايــا v1.0</p>
               </div>
             </div>
             <div className="flex justify-between items-center flex-row-reverse">

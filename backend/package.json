@@ -1,7 +1,7 @@
 {
   "name": "@saraya/backend",
   "version": "1.0.0",
-  "description": "Backend API for Saraya QR Menu System",
+  "description": "Backend API for الســـرايــا QR Menu System",
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",

@@ -51,6 +51,20 @@ export default function ProductsPage() {
     fetchAdminCategories()
   }, [isAuthenticated, router, fetchAdminProducts, fetchAdminCategories])
 
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [showModal])
+
   const handleOpenModal = (product?: AdminProduct) => {
     if (product) {
       setSelectedProduct(product)
@@ -104,7 +118,6 @@ export default function ProductsPage() {
       }
       
       handleCloseModal()
-      fetchAdminProducts()
     } catch (error) {
       console.error('Failed to save product:', error)
     }
@@ -114,7 +127,7 @@ export default function ProductsPage() {
     if (window.confirm('هل أنت متأكد من حذف هذا المنتج؟')) {
       try {
         await deleteProduct(productId)
-        fetchAdminProducts()
+        // No need to fetch products - store updates the array directly
       } catch (error) {
         console.error('Failed to delete product:', error)
       }

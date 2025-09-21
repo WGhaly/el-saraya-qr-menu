@@ -25,12 +25,22 @@ export default function MenuPage({ params: { locale } }: { params: { locale: str
   const [categories, setCategories] = useState<Category[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!mounted) return
+    
     const fetchMenu = async () => {
       try {
         setLoading(true)
-        const response = await fetch(`http://localhost:3001/api/v1/categories/public?lang=${locale}`)
+        // Ensure we're using the production API URL
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://el-saraya-qr-menu-production.up.railway.app/api/v1'
+        console.log('API URL being used:', apiUrl) // Debug log
+        const response = await fetch(`${apiUrl}/categories/public?lang=${locale}`)
         const data = await response.json()
         
         if (data.success) {
@@ -39,6 +49,7 @@ export default function MenuPage({ params: { locale } }: { params: { locale: str
           setError(data.message || 'Failed to load menu')
         }
       } catch (err) {
+        console.error('API Error:', err) // Debug log
         setError('Failed to connect to server')
       } finally {
         setLoading(false)
@@ -46,9 +57,10 @@ export default function MenuPage({ params: { locale } }: { params: { locale: str
     }
 
     fetchMenu()
-  }, [locale])
+  }, [locale, mounted])
 
-  if (loading) {
+  // Prevent hydration mismatches by only showing loading state after mount
+  if (!mounted || loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background-wood">
         <div className="text-center">

@@ -11,6 +11,11 @@ const nextConfig = {
         port: '3001',
         pathname: '/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'el-saraya-qr-menu-production.up.railway.app',
+        pathname: '/uploads/**',
+      },
     ],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],

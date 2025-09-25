@@ -1,6 +1,7 @@
 'use client'
 
 // Expandable category cards implementation for Al-Saraya menu
+// Last deployment: 2025-09-26
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 

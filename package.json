@@ -1,7 +1,7 @@
 {
   "name": "saraya-qr-menu",
-  "version": "1.0.0",
-  "description": "QR Code Menu System for Saraya Drinks with CMS",
+  "version": "1.0.1",
+  "description": "QR Code Menu System for Saraya Drinks with CMS - Expandable Cards Version",
   "private": true,
   "workspaces": [
     "frontend",

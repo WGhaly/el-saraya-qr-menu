@@ -29,6 +29,7 @@ export default function MenuContent({ locale }: MenuContentProps) {
   const [categories, setCategories] = useState<Category[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
 
   useEffect(() => {
     const fetchMenu = async () => {
@@ -140,64 +141,74 @@ export default function MenuContent({ locale }: MenuContentProps) {
             </p>
           </div>
         ) : (
-          <div className="space-y-12">
-            {categories.map((category) => (
-              <div key={category.id} className="space-y-8 animate-fade-in">
-                <div className="relative">
-                  <h2 className="text-4xl font-bold text-primary-800 border-b-3 border-secondary-500 pb-3 relative inline-block">
-                    {locale === 'ar' ? category.nameAr : category.nameEn}
-                    <div className="absolute bottom-0 left-0 w-1/3 h-1 bg-gradient-warm rounded-full"></div>
-                  </h2>
-                  <p className="text-primary-700 mt-2 font-medium">
-                    {locale === 'ar' ? category.descriptionAr : category.descriptionEn}
-                  </p>
-                </div>
-                
-                {category.products.length === 0 ? (
-                  <div className="card text-center py-8">
-                    <p className="text-primary-600 text-lg">
-                      {locale === 'ar' ? 'لا توجد منتجات في هذه الفئة' : 'No products in this category'}
-                    </p>
-                  </div>
-                ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {category.products.map((product, index) => (
-                      <div 
-                        key={product.id} 
-                        className="menu-item group"
-                        style={{ animationDelay: `${index * 0.1}s` }}
-                      >
-                        <div className="flex justify-between items-start mb-4">
-                          <h3 className="text-xl font-semibold text-primary-800 group-hover:text-primary-600 transition-colors">
-                            {locale === 'ar' ? product.nameAr : product.nameEn}
-                          </h3>
-                          <div className="flex flex-col items-end">
-                            <span className="price-large">
-                              {product.basePrice}
-                            </span>
-                            <span className="text-xs text-primary-600 font-medium">
-                              {locale === 'ar' ? 'ج.م' : 'EGP'}
-                            </span>
-                          </div>
-                        </div>
-                        
-                        {((locale === 'ar' ? product.descriptionAr : product.descriptionEn)) && (
-                          <p className="text-primary-700 text-sm leading-relaxed line-clamp-3">
-                            {locale === 'ar' ? product.descriptionAr : product.descriptionEn}
+          <div className="space-y-6">
+            {categories.map((category) => {
+              const isExpanded = expandedCategory === category.id
+              return (
+                <div key={category.id} className="animate-fade-in">
+                  <button
+                    className={`w-full text-left rounded-xl shadow-wood bg-white border border-primary-100 px-6 py-5 flex items-center justify-between focus:outline-none transition-all duration-200 ${isExpanded ? 'ring-2 ring-primary-600' : ''}`}
+                    onClick={() => setExpandedCategory(isExpanded ? null : category.id)}
+                    aria-expanded={isExpanded}
+                  >
+                    <div>
+                      <h2 className="text-2xl font-bold text-primary-800">
+                        {locale === 'ar' ? category.nameAr : category.nameEn}
+                      </h2>
+                      <p className="text-primary-700 mt-1 font-medium text-sm">
+                        {locale === 'ar' ? category.descriptionAr : category.descriptionEn}
+                      </p>
+                    </div>
+                    <span className={`ml-4 text-primary-600 text-xl transition-transform ${isExpanded ? 'rotate-180' : ''}`}>▼</span>
+                  </button>
+                  {isExpanded && (
+                    <div className="pt-6 pb-2">
+                      {category.products.length === 0 ? (
+                        <div className="card text-center py-8">
+                          <p className="text-primary-600 text-lg">
+                            {locale === 'ar' ? 'لا توجد منتجات في هذه الفئة' : 'No products in this category'}
                           </p>
-                        )}
-                        
-                        <div className="mt-4 pt-3 border-t border-primary-100">
-                          <span className="category-badge">
-                            {locale === 'ar' ? 'متوفر' : 'Available'}
-                          </span>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+                      ) : (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                          {category.products.map((product, index) => (
+                            <div 
+                              key={product.id} 
+                              className="menu-item group"
+                              style={{ animationDelay: `${index * 0.1}s` }}
+                            >
+                              <div className="flex justify-between items-start mb-4">
+                                <h3 className="text-xl font-semibold text-primary-800 group-hover:text-primary-600 transition-colors">
+                                  {locale === 'ar' ? product.nameAr : product.nameEn}
+                                </h3>
+                                <div className="flex flex-col items-end">
+                                  <span className="price-large">
+                                    {product.basePrice}
+                                  </span>
+                                  <span className="text-xs text-primary-600 font-medium">
+                                    {locale === 'ar' ? 'ج.م' : 'EGP'}
+                                  </span>
+                                </div>
+                              </div>
+                              {((locale === 'ar' ? product.descriptionAr : product.descriptionEn)) && (
+                                <p className="text-primary-700 text-sm leading-relaxed line-clamp-3">
+                                  {locale === 'ar' ? product.descriptionAr : product.descriptionEn}
+                                </p>
+                              )}
+                              <div className="mt-4 pt-3 border-t border-primary-100">
+                                <span className="category-badge">
+                                  {locale === 'ar' ? 'متوفر' : 'Available'}
+                                </span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         )}
       </main>

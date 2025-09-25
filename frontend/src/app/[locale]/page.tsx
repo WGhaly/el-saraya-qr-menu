@@ -3,8 +3,8 @@
 import dynamic from 'next/dynamic'
 import React from 'react'
 
-// Dynamically import the MenuContent component with no SSR to prevent hydration errors
-const MenuContent = dynamic(() => import('../../components/MenuContent'), {
+// Dynamically import the ClientOnlyMenuContent component with no SSR to prevent hydration errors
+const ClientOnlyMenuContent = dynamic(() => import('../../components/ClientOnlyMenuContent'), {
   ssr: false,
   loading: () => (
     <div className="min-h-screen flex items-center justify-center bg-background-wood">
@@ -24,5 +24,5 @@ const MenuContent = dynamic(() => import('../../components/MenuContent'), {
 })
 
 export default function MenuPage({ params: { locale } }: { params: { locale: string } }) {
-  return <MenuContent locale={locale} />
+  return <ClientOnlyMenuContent locale={locale} />
 }

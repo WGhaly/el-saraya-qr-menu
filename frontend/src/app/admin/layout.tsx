@@ -25,8 +25,9 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     // Don't redirect if already on login page
     if (pathname === '/admin/login') return
 
-    // Check authentication status - if no token and not loading, redirect
-    if (!isLoading && !token && !isAuthenticated) {
+    // Enhanced authentication check - redirect if no valid token OR not authenticated
+    if (!isLoading && (!token || !isAuthenticated)) {
+      console.log('Admin redirect - no valid authentication:', { token: !!token, isAuthenticated, pathname })
       router.replace('/admin/login')
     }
   }, [isAuthenticated, isLoading, token, router, pathname, isMounted])
@@ -43,9 +44,11 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     )
   }
 
-  // Don't show anything while redirecting (except for login page)
-  if (!isAuthenticated && !token && pathname !== '/admin/login') {
-    return null
+  // Don't show anything while redirecting OR if not properly authenticated (except for login page)
+  if (!isAuthenticated || !token) {
+    if (pathname !== '/admin/login') {
+      return null
+    }
   }
 
   return <>{children}</>

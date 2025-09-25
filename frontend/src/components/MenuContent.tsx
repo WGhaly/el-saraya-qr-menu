@@ -149,7 +149,7 @@ export default function MenuContent({ locale }: MenuContentProps) {
               return (
                 <div key={category.id} className="animate-fade-in">
                   <button
-                    className={`w-full text-left rounded-xl shadow-wood bg-white border border-primary-100 px-6 py-5 flex items-center justify-between focus:outline-none transition-all duration-200 ${isExpanded ? 'ring-2 ring-primary-600' : ''}`}
+                    className={`w-full ${locale === 'ar' ? 'text-right' : 'text-left'} rounded-xl shadow-wood bg-white border border-primary-100 px-6 py-5 flex items-center justify-between focus:outline-none transition-all duration-200 ${isExpanded ? 'ring-2 ring-primary-600' : ''}`}
                     onClick={() => setExpandedCategory(isExpanded ? null : category.id)}
                     aria-expanded={isExpanded}
                   >

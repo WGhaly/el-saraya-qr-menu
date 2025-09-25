@@ -24,5 +24,6 @@ const ClientOnlyMenuContent = dynamic(() => import('../../components/ClientOnlyM
 })
 
 export default function MenuPage({ params: { locale } }: { params: { locale: string } }) {
+  // Force deployment cache bust - 2024-12-21-15:52
   return <ClientOnlyMenuContent locale={locale} />
 }

@@ -37,7 +37,7 @@ export default function MenuContent({ locale }: MenuContentProps) {
         setLoading(true)
         // Ensure we're using the production API URL
         const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://el-saraya-qr-menu-production.up.railway.app/api/v1'
-        console.log('API URL being used:', apiUrl) // Debug log
+        console.log('API URL being used:', apiUrl) // Debug log  
         const response = await fetch(`${apiUrl}/categories/public?lang=${locale}`)
         const data = await response.json()
         

@@ -159,7 +159,7 @@ export default function MenuContent({ locale }: MenuContentProps) {
                         {locale === 'ar' ? category.descriptionAr : category.descriptionEn}
                       </p>
                     </div>
-                    <span className={`ml-4 text-primary-600 text-xl transition-transform ${isExpanded ? 'rotate-180' : ''}`}>▼</span>
+                    <span className={`${locale === 'ar' ? 'mr-4' : 'ml-4'} text-primary-600 text-xl transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>▼</span>
                   </button>
                   {isExpanded && (
                     <div className="pt-6 pb-2">
